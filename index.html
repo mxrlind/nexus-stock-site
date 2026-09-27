@@ -68,6 +68,8 @@
   .checks { list-style: none; padding: 0; margin: 16px 0 0; }
   .checks li { padding-left: 28px; position: relative; margin-bottom: 8px; }
   .checks li::before { content: "✓"; position: absolute; left: 0; color: var(--ok); font-weight: 800; }
+  .plans { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 900px; margin: 28px auto 0; align-items: stretch; }
+  .plans .price { max-width: none; margin: 0; }
   .price { max-width: 480px; margin: 28px auto 0; text-align: center; border: 2px solid var(--accent); }
   .price .big { font-size: 3rem; font-weight: 800; letter-spacing: -0.03em; }
   .price .checks { text-align: left; }
@@ -93,7 +95,7 @@
   .center .lead { margin-left: auto; margin-right: auto; }
   @media (max-width: 820px) {
     section { padding: 48px 0; }
-    .hero-grid, .grid3, .grid2, .steps, .shots { grid-template-columns: 1fr; }
+    .hero-grid, .grid3, .grid2, .steps, .shots, .plans { grid-template-columns: 1fr; }
     .btn { width: 100%; text-align: center; }
     .wa-float { display: block; position: fixed; right: 16px; bottom: 16px; z-index: 10; width: auto; padding: 14px 20px; border-radius: 99px; background: #16a34a; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 6px 18px rgba(0,0,0,.25); }
     body { padding-bottom: 72px; }
@@ -238,6 +240,7 @@
     <div class="wrap center">
       <h2>Pague uma vez, use sempre. Suporte 24h só se quiser.</h2>
       <p class="lead">Uma licença por loja. O programa é pago uma vez; a mensalidade existe só se você quiser o suporte 24h. Por exemplo: se o Nexus Stock ajudar a evitar R$ 50 de desperdício por mês, ele se paga em 6 meses.</p>
+      <div class="plans">
       <div class="card price">
         <div class="tag">Licença Nexus Stock</div>
         <div class="big">R$ 297</div>
@@ -262,6 +265,7 @@
           <li>Ajuda com dúvidas, restauração de backup e problemas do programa</li>
         </ul>
         <p class="muted" style="font-size:.85rem;margin-top:12px">Contrate quando quiser, junto com a licença ou depois. Combine pelo WhatsApp.</p>
+      </div>
       </div>
     </div>
   </section>
