@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nexus Stock — controle de estoque para cafeteria, floricultura e pequenas lojas</title>
 <meta name="description" content="Programa de estoque para Windows que calcula o custo e a margem de cada receita. Funciona sem internet, sem mensalidade. 15 dias grátis.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Nexus Stock — estoque com custo e margem por receita">
+<meta property="og:description" content="Programa de estoque para cafeteria, floricultura e pequenas lojas. Sem internet, sem mensalidade. 15 dias grátis.">
+<meta property="og:image" content="https://mxrlind.github.io/nexus-stock-site/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <style>
   :root {
     --bg: #ffffff; --bg-alt: #f5f6fb; --card: #ffffff; --ink: #14162b; --muted: #5a5f7a;
@@ -72,12 +80,23 @@
   .shots figure { margin: 0; }
   .shots img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 8px 24px rgba(20, 22, 43, 0.12); }
   .shots figcaption { margin-top: 8px; font-size: 0.9rem; color: var(--muted); }
+  .proof { display: flex; gap: 10px; align-items: center; margin-top: 18px; font-weight: 600; }
+  .proof::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--ok); flex-shrink: 0; }
+  .hero-shot img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 10px 30px rgba(91, 92, 246, 0.18); }
+  .hero-shot small { display: block; margin-top: 8px; color: var(--muted); }
+  .win { max-width: 420px; background: #0f2f57; color: #fff; border-radius: 6px; padding: 18px 20px; font-size: 0.9rem; margin: 12px 0; }
+  .win strong { display: block; font-size: 1.05rem; margin-bottom: 6px; }
+  .win .lnk { color: #9fd0ff; text-decoration: underline; }
+  .win .lnk b { background: #ffd54a; color: #14162b; padding: 0 4px; border-radius: 3px; }
+  .wa-float { display: none; }
   .center { text-align: center; }
   .center .lead { margin-left: auto; margin-right: auto; }
   @media (max-width: 820px) {
     section { padding: 48px 0; }
     .hero-grid, .grid3, .grid2, .steps, .shots { grid-template-columns: 1fr; }
     .btn { width: 100%; text-align: center; }
+    .wa-float { display: block; position: fixed; right: 16px; bottom: 16px; z-index: 10; width: auto; padding: 14px 20px; border-radius: 99px; background: #16a34a; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 6px 18px rgba(0,0,0,.25); }
+    body { padding-bottom: 72px; }
   }
 </style>
 </head>
@@ -100,20 +119,13 @@
           <a class="btn" href="https://wa.me/5521973406091?text=Ol%C3%A1!%20Quero%20testar%20o%20Nexus%20Stock%20por%2015%20dias." id="cta1">Testar 15 dias grátis</a>
           <a class="btn ghost" href="#recursos">Ver o que faz</a>
         </div>
-        <p class="muted" style="margin-top:16px;font-size:.9rem">Para Windows · funciona sem internet · sem mensalidade</p>
+        <p class="proof">Criado e usado no dia a dia de uma cafeteria com floricultura.</p>
+        <p class="muted" style="margin-top:8px;font-size:.9rem">Para Windows · funciona sem internet · sem mensalidade</p>
       </div>
 
-      <div class="mock" aria-label="Exemplo ilustrativo de receitas com custo e margem">
-        <span class="tag">Exemplo ilustrativo</span>
-        <table>
-          <thead><tr><th>Receita</th><th>Custo</th><th>Preço</th><th>Margem</th></tr></thead>
-          <tbody>
-            <tr><td>Bolo de cenoura</td><td>R$ 18,40</td><td>R$ 45,00</td><td class="good">59%</td></tr>
-            <tr><td>Cappuccino</td><td>R$ 3,10</td><td>R$ 9,00</td><td class="good">66%</td></tr>
-            <tr><td>Buquê de girassol</td><td>R$ 52,00</td><td>R$ 70,00</td><td class="bad">26%</td></tr>
-          </tbody>
-        </table>
-        <small>Quando o custo de um ingrediente sobe e o preço não acompanha, você vê na hora.</small>
+      <div class="hero-shot">
+        <img src="img/receitas.png" width="1264" height="735" alt="Tela de receitas do Nexus Stock com custo, preço e margem de cada receita">
+        <small>Tela real do programa (dados de exemplo): custo, preço e margem de cada receita.</small>
       </div>
     </div>
   </section>
@@ -124,7 +136,7 @@
       <div class="grid3">
         <div class="card"><h3>“Acho que tem, mas não sei quanto.”</h3><p>Ninguém confia na contagem de cabeça. O sistema mostra o saldo de cada produto na hora.</p></div>
         <div class="card"><h3>Faltou o que mais vende</h3><p>Só se descobre com o cliente na frente. Aqui o alerta de estoque baixo chega antes.</p></div>
-        <div class="card"><h3>Vende bem e sobra pouco</h3><p>O preço foi definido “no olho”. Com o custo real de cada receita, você enxerga onde está perdendo.</p></div>
+        <div class="card"><h3>Vende bem e sobra pouco</h3><p>Uma margem de 26% parece boa até descontar aluguel, funcionário e perdas. Com o custo real de cada receita, você enxerga onde está perdendo.</p></div>
       </div>
     </div>
   </section>
@@ -185,30 +197,56 @@
     </div>
   </section>
 
+  <section>
+    <div class="wrap">
+      <h2>Quem fez</h2>
+      <p class="lead">O Nexus Stock nasceu de um problema real: controlar o estoque e o custo das receitas de uma cafeteria com floricultura. Foi criado por um desenvolvedor independente, que usa o programa no dia a dia da loja e cuida de cada cliente diretamente.</p>
+      <ul class="checks">
+        <li>Suporte direto comigo, pelo WhatsApp, sem central de atendimento.</li>
+        <li>Suporte e atualizações vitalícios: quem compra a licença não paga por isso depois.</li>
+      </ul>
+      <div class="row"><a class="btn ghost" href="https://wa.me/5521973406091?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Nexus%20Stock.">Tirar uma dúvida no WhatsApp</a></div>
+    </div>
+  </section>
+
   <section class="alt">
     <div class="wrap">
       <h2>Como funciona</h2>
       <ol class="steps">
-        <li><h3>Teste 15 dias</h3><p class="muted">Chame no WhatsApp, receba o instalador e use com os seus produtos de verdade.</p></li>
+        <li><h3>Teste 15 dias</h3><p class="muted">Chame no WhatsApp e eu instalo com você, por acesso remoto e sem custo. Depois é só usar com os seus produtos de verdade.</p></li>
         <li><h3>Cadastre e use</h3><p class="muted">Use o catálogo pronto ou cadastre o seu. Ajuste os custos na primeira compra.</p></li>
         <li><h3>Ative a licença</h3><p class="muted">Gostou? Você recebe uma chave e o sistema fica liberado para sempre, no nome da sua loja.</p></li>
       </ol>
+      <h3 style="margin-top:32px">Vai aparecer um aviso do Windows na instalação. É normal.</h3>
+      <p class="muted">O programa ainda não tem a assinatura digital paga, então o Windows mostra este aviso na primeira vez. Se preferir, faço a instalação junto com você. Para seguir sozinho:</p>
+      <div class="win" role="img" aria-label="Ilustração do aviso do Windows com o link Mais informações destacado">
+        <strong>O Windows protegeu o seu computador</strong>
+        Este aplicativo não foi reconhecido pelo Microsoft Defender SmartScreen.<br>
+        <span class="lnk"><b>1</b> Mais informações</span>
+      </div>
+      <div class="win" role="img" aria-label="Ilustração do botão Executar assim mesmo destacado">
+        <strong>Nexus Stock Setup</strong>
+        Editor: desconhecido<br>
+        <span class="lnk"><b>2</b> Executar assim mesmo</span>
+      </div>
+      <p class="muted" style="font-size:.85rem">Ilustração aproximada; o visual pode variar conforme a versão do Windows.</p>
     </div>
   </section>
 
   <section id="preco">
     <div class="wrap center">
       <h2>Pague uma vez, use sempre</h2>
-      <p class="lead">Uma licença por loja. Sem mensalidade e sem letra miúda.</p>
+      <p class="lead">Uma licença por loja. Sistemas por assinatura cobram todo mês; aqui você paga uma vez. Por exemplo: se o Nexus Stock ajudar a evitar R$ 50 de desperdício por mês, ele se paga em 6 meses.</p>
       <div class="card price">
         <div class="tag">Licença Nexus Stock</div>
         <div class="big">R$ 297</div>
-        <p class="muted">pagamento único</p>
+        <p class="muted">pagamento único · forma de pagamento combinada no WhatsApp</p>
         <ul class="checks">
           <li>15 dias de teste grátis</li>
           <li>Todas as funções incluídas</li>
           <li>Modo rede para vários computadores</li>
-          <li>Instalação assistida opcional: + R$ 150</li>
+          <li>Instalação assistida gratuita, por acesso remoto</li>
+          <li>Suporte e atualizações vitalícios</li>
         </ul>
         <div class="row" style="justify-content:center"><a class="btn" href="https://wa.me/5521973406091?text=Ol%C3%A1!%20Quero%20testar%20o%20Nexus%20Stock%20por%2015%20dias." id="cta2">Começar o teste grátis</a></div>
       </div>
@@ -218,11 +256,13 @@
   <section class="alt">
     <div class="wrap">
       <h2>Perguntas frequentes</h2>
+      <details><summary>O que acontece depois da compra?</summary><p>Você recebe a chave de licença, que libera o programa para sempre no nome da sua loja. O suporte pelo WhatsApp e as atualizações são vitalícios, sem custo extra.</p></details>
+      <details><summary>Roda no meu computador?</summary><p>Precisa de Windows 10 ou 11 (64 bits). Funciona em notebook simples de balcão; recomendo 4 GB de RAM. Se tiver dúvida, o teste de 15 dias mostra na prática.</p></details>
       <details><summary>Preciso de internet?</summary><p>Não. O sistema funciona inteiro sem conexão. Só é preciso rede local se você quiser usar em mais de um computador.</p></details>
       <details><summary>Funciona em Mac ou celular?</summary><p>O programa é para Windows. Em outros computadores da mesma rede, dá para abrir pelo navegador usando o modo rede.</p></details>
       <details><summary>E se o computador quebrar?</summary><p>O backup automático grava cópias em Documentos\Estoque\backups. Copie para um pendrive de vez em quando e restaure em qualquer computador.</p></details>
       <details><summary>Os meus dados vão para a internet?</summary><p>Não. Tudo fica no computador da loja. Não há conta, nuvem nem envio de informações.</p></details>
-      <details><summary>O Windows mostra um aviso ao instalar. É seguro?</summary><p>O instalador ainda não tem assinatura digital paga, então o Windows mostra “O Windows protegeu o seu computador” na primeira vez. Clique em <strong>Mais informações → Executar assim mesmo</strong>. Ajudo você na instalação, se precisar.</p></details>
+      <details><summary>O Windows mostra um aviso ao instalar. É seguro?</summary><p>O aviso aparece porque o programa ainda não tem assinatura digital paga, não porque tenha algo errado. Veja o passo a passo acima ou peça a instalação assistida: faço junto com você, por acesso remoto e sem custo.</p></details>
       <details><summary>Serve para o meu tipo de loja?</summary><p>Foi feito e usado numa cafeteria com floricultura, e serve para quem controla produtos e receitas: padaria, confeitaria, lanchonete, floricultura. Se tiver dúvida, teste os 15 dias.</p></details>
     </div>
   </section>
@@ -237,8 +277,10 @@
 </main>
 
 <footer>
-  <div class="wrap">Nexus Stock · Gestão de estoque para pequenas lojas</div>
+  <div class="wrap">Nexus Stock · Gestão de estoque para pequenas lojas · Contato: <a href="https://wa.me/5521973406091">WhatsApp (21) 97340-6091</a></div>
 </footer>
+
+<a class="wa-float" href="https://wa.me/5521973406091?text=Ol%C3%A1!%20Quero%20testar%20o%20Nexus%20Stock%20por%2015%20dias.">WhatsApp</a>
 
 </body>
 </html>
