@@ -87,6 +87,7 @@
   .trust-item span { font-size: 0.85rem; color: var(--muted); }
   .shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 28px; }
   .shots figure { margin: 0; }
+  .shots figure:last-child:nth-child(odd) { grid-column: 1 / -1; width: calc(50% - 10px); justify-self: center; }
   .shots img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 8px 24px rgba(20, 22, 43, 0.12); }
   .shots figcaption { margin-top: 8px; font-size: 0.9rem; color: var(--muted); }
   .proof { display: flex; gap: 10px; align-items: center; margin-top: 18px; font-weight: 600; }
@@ -106,6 +107,7 @@
     .hero-grid, .grid3, .grid2, .steps, .shots, .plans, .trust .wrap { grid-template-columns: 1fr; }
     .btn { width: 100%; text-align: center; padding: 18px 20px; }
     .bar { font-size: 0.8rem; padding: 6px 12px; }
+    .shots figure:last-child:nth-child(odd) { width: auto; }
     .top nav { padding: 10px 0; }
     .hero { padding: 28px 0 40px; }
     h1 { font-size: 1.9rem; }
@@ -143,7 +145,7 @@
 
       <div class="hero-shot">
         <img src="img/receitas.png" width="1264" height="735" fetchpriority="high" alt="Tela de receitas do Nexus Stock com custo, preço e margem de cada receita">
-        <small>Tela real do programa (dados de exemplo): custo, preço e margem de cada receita.</small>
+        <small>Tela real (dados de exemplo): veja na hora quanto cada receita custa e quanto sobra.</small>
       </div>
     </div>
   </section>
@@ -196,10 +198,9 @@
       <h2>Veja por dentro</h2>
       <p class="muted">Telas reais do programa, com dados de exemplo.</p>
       <div class="shots">
-        <figure><img src="img/receitas.png" width="1264" height="735" loading="lazy" alt="Tela de receitas mostrando custo, preço de venda e margem de cada receita"><figcaption><strong>Receitas:</strong> custo, preço e margem de cada uma.</figcaption></figure>
-        <figure><img src="img/alertas.png" width="1264" height="735" loading="lazy" alt="Tela de alertas listando produtos sem estoque e com estoque baixo"><figcaption><strong>Alertas:</strong> o que zerou e o que está acabando.</figcaption></figure>
-        <figure><img src="img/produtos.png" width="1264" height="735" loading="lazy" alt="Lista de produtos com estoque atual, mínimo, status e custo"><figcaption><strong>Produtos:</strong> saldo, mínimo e custo, com busca e filtros.</figcaption></figure>
-        <figure><img src="img/historico.png" width="1264" height="735" loading="lazy" alt="Histórico de movimentações com entradas e saídas, quem fez e quando"><figcaption><strong>Histórico:</strong> toda entrada e saída, com quem fez e quando.</figcaption></figure>
+        <figure><img src="img/alertas.png" width="1264" height="735" loading="lazy" alt="Tela de alertas listando produtos sem estoque e com estoque baixo"><figcaption><strong>Alertas:</strong> saiba o que está acabando antes de o cliente pedir.</figcaption></figure>
+        <figure><img src="img/produtos.png" width="1264" height="735" loading="lazy" alt="Lista de produtos com estoque atual, mínimo, status e custo"><figcaption><strong>Produtos:</strong> o saldo de cada item na hora, sem contar de cabeça.</figcaption></figure>
+        <figure><img src="img/historico.png" width="1264" height="735" loading="lazy" alt="Histórico de movimentações com entradas e saídas, quem fez e quando"><figcaption><strong>Histórico:</strong> todo movimento registrado: quem fez, quando e qual o tipo.</figcaption></figure>
       </div>
     </div>
   </section>
